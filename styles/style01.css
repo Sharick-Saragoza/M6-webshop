@@ -5,8 +5,8 @@ html, body{
 
 /* Grid layout */
 .grid-container{
-    height: 100vh;
     width: 100vw;
+    max-width: 100%;
     display: grid;
     background-color: #003e29;
     grid-template-rows: 66px 1fr 1fr 15vh;
@@ -33,7 +33,7 @@ html, body{
     margin-top: 1px;
     grid-row: 2 / 4;
     grid-column: 2 / 4;
-    background-color: #467061;
+    background-color: #003e29;
 }
 
 /* Footer */
@@ -44,7 +44,7 @@ html, body{
 }
 
 /* Navbar */
-ul {
+ul{
     list-style-type: none;
     margin: 0;
     padding: 10px 25px 10px 25px;
@@ -52,11 +52,11 @@ ul {
     background-color: #ffff;
   }
   
-  li {
+  li{
     float: right;
   }
   
-  li a {
+  li a{
     display: block;
     color: black;
     text-align: center;
@@ -64,7 +64,7 @@ ul {
     text-decoration: none;
   }
   
-  li a:hover {
+  li a:hover{
     color: #111;
   }
 
@@ -78,15 +78,15 @@ ul {
   }
 
 /* Sidenav */
-.sidenav {
+.sidenav{
   background-color: #ffff;
   overflow-x: hidden;
-  padding-top: 20px;
-  margin: 50px 10px 50px 10px;
-  border-radius: 20px;
+  padding-top: 10px;
+  margin: 5vh 10px 30vh 10px;
+  border-radius: 10px;
 }
 
-.sidenav a, .dropdown-btn {
+.sidenav a, .dropdown-btn{
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
@@ -100,31 +100,63 @@ ul {
   outline: none;
 }
 
-.sidenav a:hover, .dropdown-btn:hover {
+.sidenav a:hover, .dropdown-btn:hover{
   color: #f1f1f1;
 }
 
-.active {
+.active{
   color: white; 
 }
 
-.dropdown-container {
+.dropdown-container{
   display: none;
   background-color: #262626;
   padding-left: 8px;
 }
 
-/* Cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
+/* Main grids */
+.products-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+/* Products */
+.product{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 5vh;
+  text-align: center;
+  font-family: arial;
+  border: solid 1px black;
+  background-color: #ffff;
+  border-radius: 10px;
 }
 
-.card-container {
-  padding: 2px 16px;
+.price{
+  color: grey;
+  font-size: 22px;
+}
+
+.product button{
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #003e29;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.product button:hover{
+  opacity: 0.7;
+}
+
+button{
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.product-image{
+  border-radius: 10px 10px 0 0;
 }
