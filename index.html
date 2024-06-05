@@ -7,19 +7,60 @@
     <title>JS-Crocs webshop</title>
 </head>
 <body>
+    <!-- Container -->
     <div class="grid-container">
+        <!-- Header / navbar -->
         <div class="grid-item header"> 
             <ul>
                 <li style="float: left;"><a id="logo" href="#"><img id="logo" src="img/sample-wolf.svg" alt="logo"></a></li>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="register.html">Login</a></li>
+                <li><a href="index.html">Home</a></li>
               </ul>
         </div>
-        <div class="grid-item sidebar">sidebar</div>
-        <div class="grid-item main">main</div>
+        <!-- Sidenav -->
+        <div class="grid-item sidenav">
+            <h1 style="padding-left: 10px;">Categorieën</h1> 
+            <button class="dropdown-btn">Heren 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+            <button class="dropdown-btn">Dames 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+            <button class="dropdown-btn">Kinderen 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+            <button class="dropdown-btn">Accessoires 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <!-- Main -->
+        <div class="grid-item main">
+             
+        </div>
         <div class="grid-item footer">footer</div>
     </div>
 </body>
+<!-- Scripts -->
+<script src="scripts/script01.js"></script>
 </html>

@@ -1,0 +1,116 @@
+html, body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #467061
+}
+
+/* Grid layout */
+.grid-container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    background-color: #003e29;
+    grid-template-rows: 66px 1fr 1fr 15vh;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-item {
+    border: solid black 1px;
+}
+
+/* Header */
+.header {
+    grid-column: 1 / 4;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+}
+
+/* Main */
+.main {
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+/* Footer */
+.footer {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    background-color: white;
+}
+
+/* Navbar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 25px;
+    overflow: hidden;
+    color: #467061;
+    background-color: white;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #467061;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #111;
+}
+
+#logo {
+    height: 46px;
+    padding: 0;
+}
+
+#logo:hover {
+    background-color: transparent;
+}
+
+
+/* Data */
+
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    width: 200px; 
+    margin-right: 10px;
+}
+
+.form-group input {
+    width: 150px;
+}
+
+
+/* Knop */
+
+.block {
+    display: block;
+    width: 20%;
+    border: none;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .block:hover {
+    background-color: #14e599;
+  }
