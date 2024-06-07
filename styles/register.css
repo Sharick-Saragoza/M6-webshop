@@ -14,10 +14,6 @@ html, body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grid-item {
-    
-}
-
 /* Header */
 .header {
     grid-column: 1 / 4;
@@ -69,6 +65,18 @@ ul{
     grid-column: 2 / 4;
     grid-gap: 10px;
     padding: 20px;
+    color: white;
+}
+
+.Login {
+    grid-row: 2 / 4;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+
 }
 
 /* Footer */
@@ -90,6 +98,7 @@ ul{
 .footer-data{
   grid-template-columns: 3 / 4;
   margin: auto auto auto 16px;
+  color: black;
 }
 
 /* Navbar */
@@ -108,7 +117,7 @@ li {
 
 li a {
     display: block;
-    color: #467061;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -138,10 +147,14 @@ li a:hover {
 .form-group label {
     width: 200px; 
     margin-right: 10px;
+    color: black;
 }
 
 .form-group input {
     width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
 }
 
 
@@ -149,10 +162,10 @@ li a:hover {
 
 .block {
     display: block;
-    width: 20%;
+    width: 40%;
     border: none;
-    background-color: white;
-    color:#003e29;
+    background-color: #003e29;
+    color:white;
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
@@ -163,3 +176,49 @@ li a:hover {
   .block:hover {
     opacity: 0.7;
   }
+
+  .login-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.login-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #003e29;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.login-card button:hover {
+    opacity: 0.7;
+}
+
+
+.register-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
