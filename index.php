@@ -1,6 +1,23 @@
 <!-- Include PHP header -->
 <?php 
 include "incl/header.php";
+
+//regel 17, 19, 23, 25 en 27 zijn standaard
+include "db/dbconnection.class.php";
+//maak een nieuwe instantie aan van dbconnection
+$dbconnect = new dbconnection();
+//bouw een sql-statement waarmee je iets uit de database haalt
+$sql = "SELECT * FROM producten ORDER BY RAND() LIMIT 1";
+// //prepare is een method uit de PDO-class; het is een tussenstap waarmee je veiligheid inbouwt
+ $query = $dbconnect->prepare($sql);
+// //execute is ook een method uit de PDO-class, de daadwerkelijke bevraging van de database
+ $query->execute();
+// //fetchAll is een method uit de PDO: trekt alle gevraagde data uit de database en zet hem in de array $recset
+ $recset = $query->fetchAll(2);
+// //om de ruwe data van je database-bevraging te laten zien
+echo "<pre>";
+print_r($recset);
+echo "</pre>";
 ?>
 
 <!-- Sidenav -->
