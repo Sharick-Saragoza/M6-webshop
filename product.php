@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/product.css">
-    <title>JS-Crocs webshop</title>
-</head>
-<body>
-    <div class="grid-container">
-        <!-- Header / navbar -->
-        <div class="grid-item header"> 
-            <ul>
-                <li style="float: left;"><a id="logo-navbar" href="#"><img id="logo-navbar" src="img/logo.svg" alt="logo"></a></li>
-                <li><a href="#cart">Cart</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="index.html">Home</a></li>
-              </ul>
-        </div>
+<!-- Include PHP login header -->
+<?php 
+include "incl/header.php";
+?>
+
+<!-- Style through PHP -->
+<style>
+<?php include 'styles/product.css'; ?>
+</style>
+
         <!-- Main -->
         <div class="grid-item main">
             <div class="product-container">
@@ -27,8 +18,7 @@
                     <div class="product-name"><h1>Green Crocs</h1></div>
                     <div class="product-description"><p>Lorem ipsum this is de skibidi green Crocs. <br>
                     When you put the skibidi in the powerbank then you'll get boom boom. Boal of woa blikje in de water.</p></div>
-                    
-
+                    <a id="pbutton" href="#"><button>Buy</button></a>
                 </div>
             </div>
         </div>

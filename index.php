@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
-    <title>JS-Crocs webshop</title>
-</head>
-<body>
-    <!-- Container -->
-    <div class="grid-container">
-        <!-- Header / navbar -->
-        <div class="grid-item header"> 
-            <ul>
-                <li style="float: left;"><a id="logo-navbar" href="#"><img id="logo-navbar" src="img/logo.svg" alt="logo"></a></li>
-                <li><a href="#cart">Cart</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="index.html">Home</a></li>
-              </ul>
-        </div>
-        <!-- Sidenav -->
-        <div class="grid-item sidenav">
-            <h1 style="padding-left: 23px;">Categorieën</h1> 
-            <button class="dropdown-btn">Heren 
+<!-- Include PHP header -->
+<?php 
+include "incl/header.php";
+?>
+
+<!-- Sidenav -->
+<div class="grid-item sidenav">
+            <h1 style="padding-left: 23px;">Categories</h1> 
+            <button class="dropdown-btn">Gents 
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
@@ -29,7 +14,7 @@
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
             </div>
-            <button class="dropdown-btn">Dames 
+            <button class="dropdown-btn">Ladies
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
@@ -37,7 +22,7 @@
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
             </div>
-            <button class="dropdown-btn">Kinderen 
+            <button class="dropdown-btn">Children
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
@@ -45,7 +30,7 @@
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
             </div>
-            <button class="dropdown-btn">Accessoires 
+            <button class="dropdown-btn">Accesories
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
@@ -62,32 +47,26 @@
                         <h1>Green Crocs</h1>
                         <p class="price">$49.99</p>
                         <p>Lorem jeamsun denim lorem jeansum. Skibidi green Crocs for the battlepass.</p>
-                        <a href="product.html"><button>Toevoegen aan winkelwagen </button></a>
+                        <a href="product.php"><button>View product</button></a>
                       </div>
                       <div class="product">
                         <img class="product-image" src="img/crocs.png" alt="Green Crocs" style="width:100%;">
                         <h1>Green Crocs</h1>
                         <p class="price">$49.99</p>
                         <p>Lorem jeamsun denim lorem jeansum. Skibidi green Crocs for the battlepass.</p>
-                        <a href="product.html"><button>Toevoegen aan winkelwagen </button></a>
+                        <a href="product.php"><button>View product</button></a>
                       </div>
                       <div class="product">
                         <img class="product-image" src="img/crocs.png" alt="Green Crocs" style="width:100%;">
                         <h1>Green Crocs</h1>
                         <p class="price">$49.99</p>
                         <p>Lorem jeamsun denim lorem jeansum. Skibidi green Crocs for the battlepass.</p>
-                        <a href="product.html"><button>Toevoegen aan winkelwagen </button></a>
+                        <a href="product.php"><button>View product</button></a>
                       </div>
             </div>
         </div>
-        <!-- Footer -->
-        <div class="grid-item footer">
-            <div class="logo-footer"><img src="img/logo.svg" alt="logo"></a></div>
-            <div class="footer-data"><p>CONTACT <br> jscrocs.skibidisupport.com <br>
-            nul zes elf en de rest komt vanzelf</p></div>
-        </div>
-    </div>
-</body>
-<!-- Scripts -->
-<script src="scripts/script01.js"></script>
-</html>
+
+<!-- Include PHP footer -->
+<?php 
+include "incl/footer.php"
+?>
