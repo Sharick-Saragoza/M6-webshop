@@ -1,23 +1,24 @@
 <!-- Include PHP header -->
 <?php 
 include "incl/header.php";
-
 //regel 17, 19, 23, 25 en 27 zijn standaard
 include "db/dbconnection.class.php";
 //maak een nieuwe instantie aan van dbconnection
 $dbconnect = new dbconnection();
 //bouw een sql-statement waarmee je iets uit de database haalt
-$sql = "SELECT * FROM producten ORDER BY RAND() LIMIT 1";
+// $sql = "SELECT * FROM producten ORDER BY RAND() LIMIT 1";
+$sql = "SELECT * FROM producten";
 // //prepare is een method uit de PDO-class; het is een tussenstap waarmee je veiligheid inbouwt
  $query = $dbconnect->prepare($sql);
 // //execute is ook een method uit de PDO-class, de daadwerkelijke bevraging van de database
  $query->execute();
 // //fetchAll is een method uit de PDO: trekt alle gevraagde data uit de database en zet hem in de array $recset
- $recset = $query->fetchAll(2);
+ $recset = $query->fetchAll(PDO::FETCH_ASSOC);
 // //om de ruwe data van je database-bevraging te laten zien
-echo "<pre>";
-print_r($recset);
-echo "</pre>";
+// echo "<pre>";
+// print_r($recset);
+// echo "</pre>";
+
 ?>
 
 <!-- Sidenav -->
@@ -59,7 +60,16 @@ echo "</pre>";
         <!-- Main -->
         <div class="grid-item main">
             <div class="products-container">
+                <?php foreach($recset as $record): ?>
                     <div class="product">
+                        <img class="product-image" src="<?= $record['img'] ?>" alt="Green Crocs" style="width:100%;">
+                        <h1><?= $record['name'] ?></h1>
+                        <p class="price"><?= $record['price']?> </p>
+                        <p><?= $record['description']?></p>
+                        <a href="product.php?product_id=<?= $record['id'] ?>"><button>View product</button></a>
+                      </div>
+                <?php endforeach; ?>
+                      <!-- <div class="product">
                         <img class="product-image" src="img/crocs.png" alt="Green Crocs" style="width:100%;">
                         <h1>Green Crocs</h1>
                         <p class="price">$49.99</p>
@@ -72,14 +82,7 @@ echo "</pre>";
                         <p class="price">$49.99</p>
                         <p>Lorem jeamsun denim lorem jeansum. Skibidi green Crocs for the battlepass.</p>
                         <a href="product.php"><button>View product</button></a>
-                      </div>
-                      <div class="product">
-                        <img class="product-image" src="img/crocs.png" alt="Green Crocs" style="width:100%;">
-                        <h1>Green Crocs</h1>
-                        <p class="price">$49.99</p>
-                        <p>Lorem jeamsun denim lorem jeansum. Skibidi green Crocs for the battlepass.</p>
-                        <a href="product.php"><button>View product</button></a>
-                      </div>
+                      </div> -->
             </div>
         </div>
 
