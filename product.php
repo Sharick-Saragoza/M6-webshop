@@ -31,7 +31,6 @@ try {
     // Handle the fetched product data as needed
     // For example, you can print it out or process it further
 
-
 } catch (PDOException $e) {
     // Handle any errors during the database interaction
     echo 'Database error: ' . $e->getMessage();
@@ -53,15 +52,9 @@ include "incl/header.php";
                     <img class="product-image" src='<?= $record['img']?>' alt="Green Crocs" style="width:100%;">
                     <?php endforeach; ?>
                 </div>
-                <?php foreach($product as $record): ?>
                 <div class="product-data" style="padding-left: 5%;">
                 <h1><?= $record['name'] ?></h1>
                 <p class="price"><?= $record['price']?> </p>
-                <p><?= $record['color']?></p>
-                <p><?= $record['size']?></p>
-                <p><?= $record['category']?></p>
-                <p><?= $record['availability']?></p>
-                <p><?= $record['notes']?></p>
                 <p><?= $record['description']?></p>
                 <?php endforeach; ?>
                     <a id="pbutton" href="#"><button>Put in cart</button></a>

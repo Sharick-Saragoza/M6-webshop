@@ -1,13 +1,13 @@
 html, body{
     height: 100%;
+    width: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Grid layout */
 .grid-container{
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
     display: grid;
     background-color: #003e29;
     grid-template-rows: 66px 1fr 1fr 15vh;
@@ -172,4 +172,72 @@ button{
 
 .product-image{
   border-radius: 10px 10px 0 0;
+}
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .grid-container {
+      grid-template-rows: 66px auto 1fr 15vh;
+      grid-template-columns: 25% 1fr;
+  }
+
+  .sidenav {
+      max-height: 300px; 
+      overflow-y: auto;
+  }
+
+  .main {
+      grid-column: 2 / 3;
+  }
+
+  .products-container {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* grote telefoons */
+@media screen and (max-width: 768px) {
+  .grid-container {
+      grid-template-rows: 66px auto 1fr 15vh;
+      grid-template-columns: 1fr;
+  }
+
+  .sidenav {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      max-height: 200px;
+      overflow-y: auto;
+  }
+
+  .main {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+  }
+
+  .products-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* telefoons */
+@media screen and (max-width: 480px) {
+  .grid-container {
+    width: 430px;
+    display: block;
+    grid-template-columns: 1fr; 
+}
+
+  .sidenav {
+      margin: 5vh 5px 30vh 5px;
+      max-height: 150px;
+      overflow-y: auto;
+  }
+
+  .product button {
+      padding: 12px 50px;
+  }
+
+  .price {
+      font-size: 18px;
+  }
 }
