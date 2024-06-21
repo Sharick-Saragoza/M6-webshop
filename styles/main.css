@@ -195,7 +195,7 @@ button{
   }
 }
 
-/* grote telefoons */
+/* Grote telefoons */
 @media screen and (max-width: 768px) {
   .grid-container {
       grid-template-rows: 66px auto 1fr 15vh;
@@ -219,10 +219,10 @@ button{
   }
 }
 
-/* telefoons */
+/* Telefoons */
 @media screen and (max-width: 480px) {
   .grid-container {
-    width: 430px;
+    width: 320px;
     display: block;
     grid-template-columns: 1fr; 
 }
