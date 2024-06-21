@@ -49,12 +49,19 @@ include "incl/header.php";
         <div class="grid-item main">
             <div class="product-container">
                 <div class="product-assets">
-                    <img class="product-image" src="img/crocs.png" alt="Green Crocs" style="width:100%;">
+                <?php foreach($product as $record): ?>
+                    <img class="product-image" src='<?= $record['img']?>' alt="Green Crocs" style="width:100%;">
+                    <?php endforeach; ?>
                 </div>
                 <?php foreach($product as $record): ?>
                 <div class="product-data" style="padding-left: 5%;">
                 <h1><?= $record['name'] ?></h1>
                 <p class="price"><?= $record['price']?> </p>
+                <p><?= $record['color']?></p>
+                <p><?= $record['size']?></p>
+                <p><?= $record['category']?></p>
+                <p><?= $record['availability']?></p>
+                <p><?= $record['notes']?></p>
                 <p><?= $record['description']?></p>
                 <?php endforeach; ?>
                     <a id="pbutton" href="#"><button>Buy</button></a>
