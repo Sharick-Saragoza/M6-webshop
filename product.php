@@ -64,7 +64,7 @@ include "incl/header.php";
                 <p><?= $record['notes']?></p>
                 <p><?= $record['description']?></p>
                 <?php endforeach; ?>
-                    <a id="pbutton" href="#"><button>Buy</button></a>
+                    <a id="pbutton" href="#"><button>Put in cart</button></a>
                 </div>
             </div>
         </div>
