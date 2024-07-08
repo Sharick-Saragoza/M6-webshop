@@ -9,7 +9,7 @@ include "incl/header.php";
 </style>
 
 <!-- Main -->
-        <div class="grid-item main">
+ <form method="POST" action="Formhandlers/register.php" class="grid-item main" >
             <div class="register-card">
             <div class="form-group">
                 <label class="data" for="firstname">Voornaam (Verplicht)</label>
@@ -42,13 +42,13 @@ include "incl/header.php";
             </div>
             <br>
             <div class="form-group">
-                <label class="data" for="postal code">Postcode (Verplicht)</label>
-                <input class="data" type="text" id="postal code" placeholder="0000 XX" />
+                <label class="data" for="postal">Postcode (Verplicht)</label>
+                <input class="data" type="text" id="postal" placeholder="0000 XX" />
             </div>
             <br>
             <div class="form-group">
-                <label class="data" for="place">plaats (Verplicht)</label>
-                <input class="data" type="text" id="place" placeholder="plaats..." />
+                <label class="data" for="city">plaats (Verplicht)</label>
+                <input class="data" type="text" id="city" placeholder="plaats..." />
             </div>
             <br>
             <div class="form-group">
@@ -63,8 +63,7 @@ include "incl/header.php";
             <br>
             <button class="block" type="submit">Registreren</button>
             </div>
-        </div>
-
+</form>
 <!-- Include PHP footer -->
 <?php 
 include "incl/footer.php"
