@@ -9,6 +9,7 @@ include "incl/header.php";
 </style>
 
 <!-- Main -->
+<<<<<<< HEAD
         <div class="grid-item main">
             <form method="POST" action="formhandlers/register.php" class="register-card">
                 <div class="form-group">
@@ -65,6 +66,63 @@ include "incl/header.php";
             </form>
         </div>
 
+=======
+ <form method="POST" action="Formhandlers/register.php" class="grid-item main" >
+            <div class="register-card">
+            <div class="form-group">
+                <label class="data" for="firstname">Voornaam (Verplicht)</label>
+                <input class="data" type="text" id="firstname" placeholder="Voornaam..." />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="data" for="lasttname">Achternaam (Verplicht)</label>
+                <input class="data" type="text" id="lasttname" placeholder="Achternaam..." />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="data" for="infix">Tussenvoegsel </label>
+                <input class="data" type="text" id="infix" placeholder="Tussenvoegsel..." />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="data" for="address">Huisnummer (Verplicht)</label>
+                <input class="data" type="text" id="address" placeholder="00..." />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="data" for="street">Straatnaam (Verplicht)</label>
+                <input class="data" type="text" id="street" placeholder="Straat..." />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="data" for="addition">Toevoeging </label>
+                <input class="data" type="text" id="addition" placeholder="..." />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="data" for="postal">Postcode (Verplicht)</label>
+                <input class="data" type="text" id="postal" placeholder="0000 XX" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="data" for="city">plaats (Verplicht)</label>
+                <input class="data" type="text" id="city" placeholder="plaats..." />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="data" for="email">email adress (Verplicht)</label>
+                <input class="data" type="text" id="email" placeholder="email..." />
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="data" for="password">wachtwoord (Verplicht)</label>
+                <input class="data" type="text" id="password" placeholder="wachtwoord..." />
+            </div>
+            <br>
+            <button class="block" type="submit">Registreren</button>
+            </div>
+</form>
+>>>>>>> ee349e48c8ef2c9257982e778d325645f9a5699f
 <!-- Include PHP footer -->
 <?php 
 include "incl/footer.php"
