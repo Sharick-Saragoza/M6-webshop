@@ -1,6 +1,8 @@
+
 <?php
 
 @include_once(__DIR__."/../incl/message.php");
+@include_once(__DIR__."/../database.php");
 
 $is_error = false;
 
@@ -72,17 +74,11 @@ if (!isset($_POST['password']) || empty($_POST['password'])) {
 setOldValue('infix', (isset($_POST['infix']) ? $_POST['infix'] : ''));
 setOldValue('addition', (isset($_POST['addition']) ? $_POST['addition'] : ''));
 
-if($is_error) {
-   setError('registration-error', 'Vul a.u.b. alle verplichte velden in...');
-   header('Location: ../../register.php');
-   exit();
-}
-
-if($_POST['password'] != $_POST['password_confirm']) {
-   setError('registration-error', 'De wachtwoorden komen niet overeen. Probeer het nog eens...');
-   header('Location: ../../register.php');
-   exit();
-}
+// if($is_error) {
+//    setError('registration-error', 'Vul a.u.b. alle verplichte velden in...');
+//    header('Location: ../register.php');
+//    exit();
+// }
 
 clearOldValues();
 
