@@ -4,8 +4,6 @@
 @include_once(__DIR__ . '/helpers/Message.php');
 @include_once(__DIR__ . '/database/Database.php');
 
-@include_once(__DIR__ . '/template/head.inc.php');
-
 if (guest()) {
    if (!headers_sent()) {
       setMessage('login-messages', 'De winkelwagen is alleen te zien indien u bent ingelogd. Log a.u.b. in...');

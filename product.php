@@ -59,7 +59,7 @@ include "incl/header.php";
             <p class="price"><?= $record['price']?> </p>
             <p><?= $record['color']?></p>
             <p><?= $record['size']?></p>
-            <p><?= $record['category']?></p>
+            <p><?= $record['category_id']?></p>
             <p><?= $record['availability']?></p>
             <p><?= $record['notes']?></p>
             <p><?= $record['description']?></p>
