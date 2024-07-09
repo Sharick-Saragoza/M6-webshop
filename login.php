@@ -1,6 +1,10 @@
 <!-- Include PHP login header -->
 <?php 
 include "incl/header.php";
+
+@include_once(__DIR__ . '/helpers/Auth.php');
+@include_once(__DIR__ . '/helpers/Message.php');
+
 ?>
 
 <!-- Style through PHP -->

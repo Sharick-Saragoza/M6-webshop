@@ -13,7 +13,7 @@
         <div class="grid-item header"> 
             <ul>
                 <li style="float: left;"><a id="logo-navbar" href="index.php"><img id="logo-navbar" src="img/logo.svg" alt="logo"></a></li>
-                <li><a href="#cart">Cart</a></li>
+                <li><a href="cart.php">Cart</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="index.php">Home</a></li>
               </ul>
