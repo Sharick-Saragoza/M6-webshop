@@ -7,8 +7,8 @@
 
 if (guest()) {
    if (!headers_sent()) {
-      setMessage('login-messages', 'De winkelwagen is alleen te zien indien u bent ingelogd. Log a.u.b. in...');
-      header('Location: ./login.php');
+      //setMessage('login-messages', 'De winkelwagen is alleen te zien indien u bent ingelogd. Log a.u.b. in...');
+      //header('Location: ./login.php');
       exit();
    } else {
       die('Pagina kan niet getoond worden als u niet bent ingelogd');
