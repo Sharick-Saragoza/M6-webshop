@@ -3,6 +3,12 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
+@include_once(__DIR__ . '/helpers/Auth.php');
+@include_once(__DIR__ . '/helpers/cart_stats.php');
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +18,8 @@ if (session_status() == PHP_SESSION_NONE) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
     <title>JS-Crocs webshop</title>
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Container -->
